@@ -57,7 +57,7 @@ zinit light sindresorhus/pure
 ## Config
 KEYTIMEOUT=1
 
+## Environment Variables
 path+=("$HOME/opt/flutter/bin")
 export PATH
-
 export EDITOR=/usr/bin/nvim
