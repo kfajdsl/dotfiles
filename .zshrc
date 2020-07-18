@@ -59,6 +59,11 @@ KEYTIMEOUT=1
 
 ## Environment Variables
 path+=("$HOME/opt/flutter/bin")
+path+=("$HOME/bin")
+path+=("$HOME/.local/bin")
+path+=("$HOME/Android/Sdk/tools/bin")
+path+=("$HOME/Android/Sdk/platform-tools")
+path+=("$HOME/.emacs.d/bin")
 export PATH
 export EDITOR=/usr/bin/nvim
 
