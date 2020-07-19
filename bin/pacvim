@@ -1,0 +1,8 @@
+#!/bin/sh
+
+plugin_path=$HOME/.local/share/nvim/site/pack/pacvim/start
+
+while read -r xx; do
+  name=`echo $xx | sed 's#.*/##' | sed 's/\.git//'`
+  [ ! -d $plugin_path/$name ] && git clone $xx $plugin_path/$name
+done < "$HOME/.config/nvim/packlist"
