@@ -135,7 +135,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 9.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -159,40 +159,105 @@ font:
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
 
-# Colors (Modified Snazzy https://github.com/alebelcor/alacritty-snazzy)
+# (modified) Base16 Unikitty Dark 256 - alacritty color config
+# Josh W Lewis (@joshwlewis)
 colors:
-
+  # Default colors
   primary:
-    background: '#1c1d29'
-    foreground: '#eff0eb'
+    background: '0x1e1a21'
+    foreground: '0xbcbabe'
 
+  # Colors the cursor will use if `custom_cursor_colors` is true
   cursor:
-    cursor: '#97979b'
+    text: '0x2e2a31'
+    cursor: '0xbcbabe'
 
-  selection:
-    text:       '#282a36'
-    background: '#feffff'
-
+  # Normal colors
   normal:
-    black:   '#282a36'
-    red:     '#ff5c57'
-    green:   '#5af78e'
-    yellow:  '#f3f99d'
-    blue:    '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan:    '#9aedfe'
-    white:   '#f1f1f0'
+    black:   '0x2e2a31'
+    red:     '0xd8137f'
+    green:   '0x17ad98'
+    yellow:  '0xdc8a0e'
+    blue:    '0x796af5'
+    magenta: '0xbb60ea'
+    cyan:    '0x149bda'
+    white:   '0xbcbabe'
 
+  # Bright colors
   bright:
-    black:   '#686868'
-    red:     '#ff5c57'
-    green:   '#5af78e'
-    yellow:  '#f3f99d'
-    blue:    '#57c7ff'
-    magenta: '#ff6ac1'
-    cyan:    '#9aedfe'
-    white:   '#eff0eb'
+    black:   '0x838085'
+    red:     '0xd8137f'
+    green:   '0x17ad98'
+    yellow:  '0xdc8a0e'
+    blue:    '0x796af5'
+    magenta: '0xbb60ea'
+    cyan:    '0x149bda'
+    white:   '0xbcbabe'
 
+## Colors (Gruvbox dark)
+#colors:
+#  # Default colors
+#  primary:
+#    # hard contrast: background = '#1d2021'
+#    background: '#1d2021'
+#    # soft contrast: background = '#32302f'
+#    foreground: '#ebdbb2'
+#
+#  # Normal colors
+#  normal:
+#    black:   '#282828'
+#    red:     '#cc241d'
+#    green:   '#98971a'
+#    yellow:  '#d79921'
+#    blue:    '#458588'
+#    magenta: '#b16286'
+#    cyan:    '#689d6a'
+#    white:   '#a89984'
+#
+#  # Bright colors
+#  bright:
+#    black:   '#928374'
+#    red:     '#fb4934'
+#    green:   '#b8bb26'
+#    yellow:  '#fabd2f'
+#    blue:    '#83a598'
+#    magenta: '#d3869b'
+#    cyan:    '#8ec07c'
+#    white:   '#ebdbb2'
+
+## Colors (Modified Snazzy https://github.com/alebelcor/alacritty-snazzy)
+#colors:
+#
+#  primary:
+#    background: '#1c1d29'
+#    foreground: '#eff0eb'
+#
+#  cursor:
+#    cursor: '#97979b'
+#
+#  selection:
+#    text:       '#282a36'
+#    background: '#feffff'
+#
+#  normal:
+#    black:   '#282a36'
+#    red:     '#ff5c57'
+#    green:   '#5af78e'
+#    yellow:  '#f3f99d'
+#    blue:    '#57c7ff'
+#    magenta: '#ff6ac1'
+#    cyan:    '#9aedfe'
+#    white:   '#f1f1f0'
+#
+#  bright:
+#    black:   '#686868'
+#    red:     '#ff5c57'
+#    green:   '#5af78e'
+#    yellow:  '#f3f99d'
+#    blue:    '#57c7ff'
+#    magenta: '#ff6ac1'
+#    cyan:    '#9aedfe'
+#    white:   '#eff0eb'
 
 # Colors (Tomorrow Night)
 #colors:
@@ -310,7 +375,7 @@ colors:
 #
 # Window opacity as a floating point number from `0.0` to `1.0`.
 # The value `0.0` is completely transparent and `1.0` is opaque.
-background_opacity: 0.8
+background_opacity: 0.9 
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
