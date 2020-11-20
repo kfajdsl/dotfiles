@@ -127,6 +127,8 @@ label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
 label-empty-padding = 2
 
+pin-workspaces = false
+
 ; Separator in between workspaces
 ; label-separator = |
 
