@@ -182,3 +182,11 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+nnoremap <SPACE> <Nop>
+let mapleader = " "
+
+nnoremap <leader>n :noh<CR>
+
+nnoremap <S-j> :bprev<CR>
+nnoremap <S-k> :bnext<CR>
