@@ -64,8 +64,19 @@ path+=("$HOME/.local/bin")
 path+=("$HOME/Android/Sdk/tools/bin")
 path+=("$HOME/Android/Sdk/platform-tools")
 path+=("$HOME/.emacs.d/bin")
+path+=("$HOME/.pub-cache/bin")
 export PATH
 export EDITOR=/usr/bin/nvim
+
+## Aliases
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -lh'
+
+# I don't trust myself
+alias cp='cp -n'
+alias mv='mv -n'
+alias rm='rm -i'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/sahan/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sahan/opt/google-cloud-sdk/path.zsh.inc'; fi
