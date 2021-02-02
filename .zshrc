@@ -67,12 +67,6 @@ path+=("$HOME/.emacs.d/bin")
 export PATH
 export EDITOR=/usr/bin/nvim
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/home/sahan/opt/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sahan/opt/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/home/sahan/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sahan/opt/google-cloud-sdk/completion.zsh.inc'; fi
-
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -80,3 +74,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sahan/Downloads/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sahan/Downloads/gcloud/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/sahan/Downloads/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sahan/Downloads/gcloud/google-cloud-sdk/completion.zsh.inc'; fi

@@ -188,5 +188,5 @@ let mapleader = " "
 
 nnoremap <leader>n :noh<CR>
 
-nnoremap <S-j> :bprev<CR>
-nnoremap <S-k> :bnext<CR>
+nnoremap H :bprev<CR>
+nnoremap L :bnext<CR>
