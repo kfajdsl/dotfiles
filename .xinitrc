@@ -36,4 +36,6 @@ picom -b &
 feh --bg-scale /home/sahan/Pictures/Bf6EPG5.jpg &
 polybar bottom &
 ibus-daemon -d &
+nm-applet &
+wmname LG3D
 exec dbus-launch --exit-with-session bspwm

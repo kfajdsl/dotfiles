@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =8
+let g:netrw_dirhist_8='/home/sahan/code/emulators-tests/src'
+let g:netrw_dirhist_7='/home/sahan/code/playground/src'
+let g:netrw_dirhist_6='/home/sahan/code/sftomorrow-firebase/functions/src'
+let g:netrw_dirhist_5='/home/sahan/code/sf2020/src/pages'
+let g:netrw_dirhist_4='/home/sahan/code/sf2020/src'
+let g:netrw_dirhist_3='/etc/kernel.d/post-remove'
+let g:netrw_dirhist_2='/home/sahan/code/abstract-functions/functions'
+let g:netrw_dirhist_1='/home/sahan/code/abstract-functions'

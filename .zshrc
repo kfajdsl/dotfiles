@@ -64,9 +64,11 @@ path+=("$HOME/.local/bin")
 path+=("$HOME/Android/Sdk/tools/bin")
 path+=("$HOME/Android/Sdk/platform-tools")
 path+=("$HOME/.emacs.d/bin")
+path+=("$HOME/.pub-cache/bin")
 export PATH
 export EDITOR=/usr/bin/nvim
 
+<<<<<<< HEAD
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
@@ -74,9 +76,30 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+=======
+## Aliases
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -lh'
+
+# I don't trust myself
+alias cp='cp -n'
+alias mv='mv -n'
+alias rm='rm -i'
+>>>>>>> 2a2e36abcf9b494c8cbc47734ad4c64f9c511310
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/sahan/Downloads/gcloud/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sahan/Downloads/gcloud/google-cloud-sdk/path.zsh.inc'; fi
 
 # The next line enables shell command completion for gcloud.
+<<<<<<< HEAD
 if [ -f '/home/sahan/Downloads/gcloud/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sahan/Downloads/gcloud/google-cloud-sdk/completion.zsh.inc'; fi
+=======
+if [ -f '/home/sahan/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sahan/opt/google-cloud-sdk/completion.zsh.inc'; fi
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+# twilio autocomplete setup
+TWILIO_AC_ZSH_SETUP_PATH=/home/sahan/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+>>>>>>> 2a2e36abcf9b494c8cbc47734ad4c64f9c511310

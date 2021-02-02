@@ -190,3 +190,4 @@ nnoremap <leader>n :noh<CR>
 
 nnoremap H :bprev<CR>
 nnoremap L :bnext<CR>
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
