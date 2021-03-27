@@ -18,7 +18,6 @@
     fzf
     gcc
     gimp
-    git
     gnumake
     hello
     htop
@@ -49,7 +48,6 @@
     xorg.xprop
     xsane
     xsel
-    yadm
     youtube-dl
   ];
 }
