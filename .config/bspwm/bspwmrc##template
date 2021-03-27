@@ -15,8 +15,10 @@ bspc config window_gap          0
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+bspc config single_monocle	true
 
 bspc config focus_follows_pointer true
 
 # Window rules:
 bspc rule -a "Origin" state=floating
+bspc rule -a "Emacs" state=tiled
