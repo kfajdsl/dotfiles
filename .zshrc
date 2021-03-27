@@ -101,3 +101,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 # twilio autocomplete setup
 TWILIO_AC_ZSH_SETUP_PATH=/home/sahan/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+
+export RPROMPT="" #wtf? idk why this is needed on nixos. otherwise, the path is displayed on the right even though echo $RPROMPT doesn't output anything
