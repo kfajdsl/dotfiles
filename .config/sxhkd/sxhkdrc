@@ -8,7 +8,7 @@ super + Return
 
 # program launcher
 super + @space
-	rofi -modi drun -show drun
+	rofi -modi drun -show drun -terminal alacritty
 
 # make sxhkd reload its configuration files:
 super + Escape
@@ -22,6 +22,12 @@ XF86AudioMute
 
 XF86AudioMicMute
 	pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+XF86MonBrightnessUp
+	brightnessctl s 5%+
+
+XF86MonBrightnessDown
+	brightnessctl s 5%-
 
 #
 # bspwm hotkeys
