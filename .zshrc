@@ -77,14 +77,18 @@ export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
 ## Aliases
-alias ls='ls --color=auto'
-alias la='ls -a'
-alias ll='ls -lh'
+
+alias enw='emacs -nw'
 
 # I don't trust myself
 alias cp='cp -n'
 alias mv='mv -n'
 alias rm='rm -i'
+
+alias ls='ls --color=auto'
+alias la='ls -a'
+alias ll='ls -lh'
+alias cpr='cp -r'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/sahan/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sahan/opt/google-cloud-sdk/path.zsh.inc'; fi
