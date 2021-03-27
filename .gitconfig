@@ -1,3 +1,5 @@
 [user]
 	email = sahan.reddy.58@gmail.com
 	name = Sahan Reddy
+[pull]
+	ff = only
