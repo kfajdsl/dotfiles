@@ -27,6 +27,9 @@
     python3
 
     ## Tools
+    nix-index
+    autoconf
+    automake
     brightnessctl
     fd
     feh
@@ -46,6 +49,8 @@
     xorg.xev
     xorg.xprop
     xsel
+    xorg.xcursorgen
+    pkg-config
     youtube-dl
 
     ## Fonts 
@@ -59,7 +64,7 @@
     rofi
     sxhkd
 
-    ## Misc
+    ## Themes
     gnome3.adwaita-icon-theme
   ];
 }
