@@ -30,7 +30,7 @@ alert = #bd2c40
 [bar/bottom]
 bottom = true
 {% if yadm.hostname == "openair" %}
-monitor = ${env:MONITOR:DP-3}
+monitor = ${env:MONITOR:DVI-D-1}
 {% endif %}
 width = 100%
 height = 25

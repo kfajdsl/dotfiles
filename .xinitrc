@@ -14,7 +14,7 @@ if [ -f "$usermodmap" ]; then
 fi
 
 picom -b &
-feh --bg-scale /home/sahan/Pictures/Bf6EPG5.jpg &
+feh --bg-fill /home/sahan/Pictures/Bf6EPG5.jpg &
 polybar bottom &
 #ibus-daemon -d &
 nm-applet &

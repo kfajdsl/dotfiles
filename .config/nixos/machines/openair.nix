@@ -14,4 +14,6 @@
       Option "AccelSpeed" "0"
     EndSection
   '';
+
+  services.xserver.displayManager.sessionCommands = "xrandr --output DVI-D-1 --left-of HDMI-1"
 }
