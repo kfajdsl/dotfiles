@@ -39,7 +39,6 @@ in
 
   # Use per interface DHCP, not global
   networking.useDHCP = false;
-  networking.interfaces.wlp3s0.useDHCP = true;
 
   fonts.fonts = with pkgs; [
     noto-fonts
@@ -58,6 +57,8 @@ in
     drivers = [ pkgs.hplip ];
   };
 
+  services.timesyncd.enable = true;
+
 
   # Enable sound.
   sound.enable = true;
@@ -72,6 +73,7 @@ in
       enable = true;
       extraBackends = [ pkgs.hplip ];
     };
+    cpu.intel.updateMicrocode = true;
   };
 
   services = {

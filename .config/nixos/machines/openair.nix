@@ -2,6 +2,7 @@
 
 {
   networking.hostName = "openair";
+  networking.interfaces.enp0s25.useDHCP = true;
 
   # No mouse acceleration
   services.xserver.config = ''

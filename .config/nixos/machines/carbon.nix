@@ -2,6 +2,7 @@
 
 {
   networking.hostName = "carbon";
+  networking.interfaces.wlp3s0.useDHCP = true;
 
   hardware = {
     firmware = [ pkgs.broadcom-bt-firmware ];
