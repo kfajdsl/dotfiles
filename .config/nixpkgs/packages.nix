@@ -25,6 +25,7 @@
     nodejs
     postgresql
     python3
+    awscli2
 
     ## Tools
     nix-index
