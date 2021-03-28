@@ -80,7 +80,7 @@ export QT_IM_MODULE=ibus
 
 alias enw='emacs -nw'
 alias hm='home-manager'
-alias hms='hs switch'
+alias hms='hm switch'
 
 # I don't trust myself
 alias cp='cp -n'
