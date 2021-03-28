@@ -21,6 +21,8 @@
   # changes in each release.
   home.stateVersion = "21.03";
 
+  fonts.fontconfig.enable = true;
+
   programs.info.enable = true;
 
   programs.emacs = {

@@ -2,52 +2,64 @@
 
 {
   home.packages = with pkgs; [
-    gnome3.adwaita-icon-theme
-    alacritty
-    brightnessctl
-    cachix
-    cmake
-    dbeaver
-    discord
-    docker
-    fd
-    feh
-    ffmpeg
-    firefox
-    flameshot
-    fzf
-    gcc
-    gimp
-    gnumake
-    hello
-    htop
+    ## Fonts 
+    siji
     iosevka-ss02-bin
-    neofetch
-    neovim
-    gnome3.networkmanagerapplet
+    unifont
+
+    ## Dev Tools
+    docker
+    cmake
+    gcc
+    gnumake
     nodejs
-    pavucontrol
-    picom
-    polybar
     postgresql
     python3
+
+    ## Programs
+    dbeaver
+    alacritty
+    discord
+    firefox
+    gimp
+    neovim
     deluge
-    redshift
-    ripgrep
-    rofi
-    spotify
-    sxhkd
     teams
-    unzip
-    usbutils
+    spotify
     virt-manager
     vivaldi
     vlc
+    xsane
+    htop
+
+    ## Tools
+    brightnessctl
+    fd
+    feh
+    ffmpeg
+    flameshot
+    fzf
+    hello
+    neofetch
+    pavucontrol
+    gnome3.networkmanagerapplet
+    redshift
+    ripgrep
+    unzip
+    usbutils
     wmname
     xorg.xev
     xorg.xprop
-    xsane
     xsel
     youtube-dl
+
+    ## Desktop
+    picom
+    polybar
+    rofi
+    sxhkd
+
+    ## Misc
+    gnome3.adwaita-icon-theme
   ];
 }
