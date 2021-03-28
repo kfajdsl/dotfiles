@@ -2,20 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    ## Fonts 
-    siji
-    iosevka-ss02-bin
-    unifont
-
-    ## Dev Tools
-    docker
-    cmake
-    gcc
-    gnumake
-    nodejs
-    postgresql
-    python3
-
     ## Programs
     dbeaver
     alacritty
@@ -30,7 +16,15 @@
     vivaldi
     vlc
     xsane
-    htop
+
+    ## Dev Tools
+    docker
+    cmake
+    gcc
+    gnumake
+    nodejs
+    postgresql
+    python3
 
     ## Tools
     brightnessctl
@@ -38,6 +32,7 @@
     feh
     ffmpeg
     flameshot
+    htop
     fzf
     hello
     neofetch
@@ -52,6 +47,11 @@
     xorg.xprop
     xsel
     youtube-dl
+
+    ## Fonts 
+    siji
+    iosevka-ss02-bin
+    unifont
 
     ## Desktop
     picom
