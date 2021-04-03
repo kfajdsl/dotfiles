@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
+let
+  strToAttr = root: str: builtins.foldl' (a: b: a."${b}") root (pkgs.lib.strings.splitString "." str);
+in
 {
-  imports = [ ./packages.nix ];
+  # Read packages from a json file
+  home.packages = map (x: strToAttr pkgs x) (builtins.fromJSON (builtins.readFile ./packages.json));
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
