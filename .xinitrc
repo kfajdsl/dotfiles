@@ -13,6 +13,8 @@ if [ -f "$usermodmap" ]; then
     xmodmap "$usermodmap"
 fi
 
+xrandr --output DVI-D-1 --left-of HDMI-1
+
 picom -b &
 feh --bg-fill /home/sahan/Pictures/Bf6EPG5.jpg &
 polybar bottom &
