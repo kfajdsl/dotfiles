@@ -54,6 +54,9 @@ zinit light-mode for \
 ## Plugins
 zinit light sindresorhus/pure
 
+zinit light spwhitt/nix-zsh-completions
+zinit light chisui/zsh-nix-shell
+
 ## Config
 KEYTIMEOUT=1
 
@@ -79,6 +82,7 @@ export QT_IM_MODULE=ibus
 ## Aliases
 
 alias enw='emacs -nw'
+alias ecn='emacsclient -n'
 alias hm='home-manager'
 alias hms='hm switch'
 
@@ -104,4 +108,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # twilio autocomplete setup
 TWILIO_AC_ZSH_SETUP_PATH=/home/sahan/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
 
-export RPROMPT="" #wtf? idk why this is needed on nixos. otherwise, the path is displayed on the right even though echo $RPROMPT doesn't output anything
+nix_shell_prompt=""
+if [[ -n "$IN_NIX_SHELL" ]]; then
+	nix_shell_prompt="%F{green}nix-shell%f"
+fi
+export RPROMPT=$nix_shell_prompt
+
