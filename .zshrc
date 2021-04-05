@@ -91,6 +91,7 @@ alias cp='cp -n'
 alias mv='mv -n'
 alias rm='rm -i'
 
+alias diff='diff --color=always'
 alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -lh'
