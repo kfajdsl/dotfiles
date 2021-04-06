@@ -28,9 +28,7 @@
   (evil-mode 1))
 
 (use-package evil-collection
-  :after evil
-  :config
-  (evil-collection-init))
+  :after evil)
 
 ;; We don't call (projectile-mode 1) because counsel-projectile takes care of that
 (use-package projectile
@@ -60,6 +58,8 @@
 	:config
 	(setq-default typescript-indent-level 2))
 
+(use-package protobuf-mode)
+
 (setq-default js-indent-level 2)
 
 (use-package lsp-mode
@@ -76,6 +76,8 @@
   (setq lsp-ui-doc-show-with-cursor nil))
 (use-package lsp-ivy)
 
+(use-package magit)
+
 
 (use-package doom-themes
   :config
@@ -89,6 +91,7 @@
 
 (use-package general)
 
+(evil-collection-init) ; init evil collection keybindings after all other packages load
 ;;; Keybindings
 
 ;; One less keypress than :
