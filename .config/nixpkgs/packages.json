@@ -58,5 +58,8 @@
   "rofi",
   "sxhkd",
   "gnome3.adwaita-icon-theme",
-  "libreoffice"
+  "libreoffice",
+  "vscode",
+  "appimage-run",
+  "protobuf"
 ]
