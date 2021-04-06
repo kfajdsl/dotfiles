@@ -40,6 +40,10 @@ in
   # Use per interface DHCP, not global
   networking.useDHCP = false;
 
+  services.resolved = {
+    enable = true;
+  };
+
   fonts.fonts = with pkgs; [
     noto-fonts
     noto-fonts-cjk
