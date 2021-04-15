@@ -26,7 +26,6 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt extendedglob
 unsetopt autocd beep
-bindkey -v
 # End of lines configured by zsh-newuser-install
 
 ### Added by Zinit's installer
@@ -115,3 +114,18 @@ if [[ -n "$IN_NIX_SHELL" ]]; then
 fi
 export RPROMPT=$nix_shell_prompt
 
+# vterm integration
+vterm_printf(){
+    if [ -n "$TMUX" ] && ([ "${TERM%%-*}" = "tmux" ] || [ "${TERM%%-*}" = "screen" ] ); then
+        # Tell tmux to pass the escape sequences through
+        printf "\ePtmux;\e\e]%s\007\e\\" "$1"
+    elif [ "${TERM%%-*}" = "screen" ]; then
+        # GNU screen (screen, screen-256color, screen-256color-bce)
+        printf "\eP\e]%s\007\e\\" "$1"
+    else
+        printf "\e]%s\e\\" "$1"
+    fi
+}
+if [[ ! -n "$INSIDE_EMACS" ]]; then
+    bindkey -v
+fi
