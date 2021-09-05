@@ -5,7 +5,80 @@ let
 in
 {
   # Read packages from a json file
-  home.packages = map (x: strToAttr pkgs x) (builtins.fromJSON (builtins.readFile ./packages.json));
+  home.packages = with pkgs; [
+    dbeaver
+    alacritty
+    discord
+    firefox
+    gimp
+    neovim
+    deluge
+    teams
+    spotify
+    virt-manager
+    vivaldi
+    vlc
+    xsane
+    docker
+    cmake
+    gcc
+    gnumake
+    nodejs
+    postgresql
+    python3
+    awscli2
+    nodePackages.node2nix
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    nodePackages.prettier
+    nix-index
+    autoconf
+    automake
+    brightnessctl
+    fd
+    feh
+    ffmpeg
+    flameshot
+    htop
+    fzf
+    neofetch
+    pavucontrol
+    gnome3.networkmanagerapplet
+    redshift
+    ripgrep
+    unzip
+    usbutils
+    wmname
+    xorg.xev
+    xorg.xprop
+    xsel
+    xorg.xcursorgen
+    pkg-config
+    youtube-dl
+    lsof
+    siji
+    iosevka-ss02-bin
+    unifont
+    picom
+    polybar
+    rofi
+    sxhkd
+    gnome3.adwaita-icon-theme
+    libreoffice
+    vscode
+    appimage-run
+    protobuf
+    libtool
+    libvterm
+    neovim-qt
+    evince
+    pulseeffects-legacy
+  ];
+
+  services.udiskie = {
+    enable = true;
+    notify = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -28,11 +101,4 @@ in
   fonts.fontconfig.enable = true;
 
   programs.info.enable = true;
-
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacsGcc;
-    extraPackages = (epkgs: [ epkgs.vterm ] );
-  };
-
 }

@@ -34,7 +34,6 @@
   "flameshot",
   "htop",
   "fzf",
-  "hello",
   "neofetch",
   "pavucontrol",
   "gnome3.networkmanagerapplet",
@@ -61,5 +60,8 @@
   "libreoffice",
   "vscode",
   "appimage-run",
-  "protobuf"
+  "protobuf",
+  "libtool",
+  "libvterm",
+  "neovim-qt"
 ]
