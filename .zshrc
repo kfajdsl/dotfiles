@@ -131,4 +131,4 @@ if [[ ! -n "$INSIDE_EMACS" ]]; then
     bindkey -v
 fi
 
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
