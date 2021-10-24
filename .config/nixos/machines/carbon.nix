@@ -3,6 +3,7 @@
 {
   networking.hostName = "carbon";
   networking.interfaces.wlp3s0.useDHCP = true;
+  networking.nameservers = [ "8.8.8.8" "8.8.4.4" ];
 
   hardware = {
     firmware = [ pkgs.broadcom-bt-firmware ];

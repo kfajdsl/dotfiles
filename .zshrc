@@ -67,6 +67,7 @@ path+=("$HOME/Android/Sdk/tools/bin")
 path+=("$HOME/Android/Sdk/platform-tools")
 path+=("$HOME/.emacs.d/bin")
 path+=("$HOME/.pub-cache/bin")
+path+=("$HOME/.platformio/penv/bin")
 export PATH
 export EDITOR=/usr/bin/nvim
 

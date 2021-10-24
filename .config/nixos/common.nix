@@ -14,10 +14,10 @@ in
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableExtensionPack = true;
-  };
+#  virtualisation.virtualbox.host = {
+#    enable = true;
+#    enableExtensionPack = true;
+#  };
 
   boot.kernelPackages = pkgs.linuxPackages_latest;  
   boot.kernelParams = [ "intel_pstate=active" ];
@@ -51,6 +51,8 @@ in
     liberation_ttf
     roboto-mono
     fira-code
+    iosevka
+    (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];
 
   # Enable CUPS to print documents.

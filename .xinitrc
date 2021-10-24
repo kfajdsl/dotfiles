@@ -23,5 +23,4 @@ polybar bottom &
 #ibus-daemon -d &
 nm-applet &
 wmname LG3D
-#exec dbus-launch --exit-with-session bsp
 exec bspwm
