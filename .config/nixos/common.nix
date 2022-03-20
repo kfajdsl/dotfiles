@@ -80,6 +80,8 @@ in
     liberation_ttf
     roboto-mono
     fira-code
+    iosevka
+    (nerdfonts.override { fonts = [ "Iosevka" ]; })
   ];
 
   # Enable CUPS to print documents.

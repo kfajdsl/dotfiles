@@ -25,7 +25,5 @@ polybar bottom &
 nm-applet &
 wmname LG3D
 flameshot &
-Discord --start-minimized &
-slack -u &
 #exec dbus-launch --exit-with-session bsp
 exec bspwm
