@@ -17,11 +17,15 @@ if [ "$(hostname)" = "openair" ]; then
     xrandr --output DVI-D-1 --left-of HDMI-1
 fi
 
+xrandr --output DVI-D-0 --left-of HDMI-A-0
 picom -b &
 feh --bg-fill /home/sahan/Pictures/Bf6EPG5.jpg &
 polybar bottom &
 #ibus-daemon -d &
 nm-applet &
 wmname LG3D
+flameshot &
+Discord --start-minimized &
+slack -u &
 #exec dbus-launch --exit-with-session bsp
 exec bspwm

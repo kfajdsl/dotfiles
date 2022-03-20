@@ -78,6 +78,8 @@ export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
+export XDG_DATA_DIRS="$XDG_DATA_DIRS:/var/lib/flatpak/exports/share:$HOME/.local/share/flatpak/exports/share"
+
 ## Aliases
 
 alias enw='emacs -nw'
@@ -95,6 +97,9 @@ alias ls='ls --color=auto'
 alias la='ls -a'
 alias ll='ls -lh'
 alias cpr='cp -r'
+
+# Getting protontricks working in flatpak steam
+alias fprotontricks='flatpak run --command=protontricks com.valvesoftware.Steam'
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f '/home/sahan/opt/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sahan/opt/google-cloud-sdk/path.zsh.inc'; fi
@@ -126,6 +131,13 @@ vterm_printf(){
         printf "\e]%s\e\\" "$1"
     fi
 }
-if [[ ! -n "$INSIDE_EMACS" ]]; then
+if [[ -n "$INSIDE_EMACS" ]]; then
+    bindkey -e
+    bindkey  "^[[H"   beginning-of-line
+    bindkey  "^[[F"   end-of-line
+    bindkey  "^[[3~"  delete-char
+else
     bindkey -v
 fi
+
+eval "$(direnv hook zsh)"

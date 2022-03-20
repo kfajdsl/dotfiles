@@ -1,23 +1,32 @@
-{ config, pkgs, ... }:
+{ config, pkgs, pinned-nixpkgs, emacs-overlay, ... }:
 
 let
-  unstable-pin-2021-03-26 = builtins.fetchTarball https://github.com/NixOS/nixpkgs/archive/d3f7e969b9860fb80750147aeb56dab1c730e756.tar.gz;
+  pinnedPkgs = import (pinned-nixpkgs) {
+    system = "x86_64-linux";
+    overlays = [ emacs-overlay.overlay ];
+  };
 in
 {
-  imports =
-    [
-      "${unstable-pin-2021-03-26}/nixos/modules/virtualisation/virtualbox-host.nix"
-    ];
+  nixpkgs.config = { allowUnfree = true; };
 
-  disabledModules = [ "virtualisation/virtualbox-host.nix" ];
+  nix = {
+    package = pkgs.nixFlakes; # or versioned attributes like nix_2_7
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
   
   virtualisation.libvirtd.enable = true;
   programs.dconf.enable = true;
 
-  virtualisation.virtualbox.host = {
-    enable = true;
-    enableExtensionPack = true;
-  };
+  programs.steam.enable = true;
+  programs.java.enable = true;
+
+  #virtualisation.virtualbox.host = {
+  #  package = unstable-pin-2021-03-26.virtualbox;
+  #  enable = true;
+  #  enableExtensionPack = true;
+  #};
 
   boot.kernelPackages = pkgs.linuxPackages_latest;  
   boot.kernelParams = [ "intel_pstate=active" ];
@@ -40,8 +49,28 @@ in
   # Use per interface DHCP, not global
   networking.useDHCP = false;
 
+  services.syncthing = {
+    enable = true;
+    user = "sahan";
+    dataDir = "/home/sahan/Sync/";
+    configDir = "/home/sahan/.config/syncthing";
+  };
+
   services.resolved = {
     enable = true;
+  };
+
+  services.lorri.enable = true;
+
+  services.flatpak.enable = true;
+  xdg = {
+    portal = {
+      enable = true;
+      extraPortals = with pkgs; [
+        xdg-desktop-portal-gtk
+        xdg-desktop-portal-wlr
+      ];
+    };
   };
 
   fonts.fonts = with pkgs; [
@@ -87,7 +116,7 @@ in
       windowManager.bspwm.enable = true;
       libinput = {
         enable = true;
-        tapping = false;
+        touchpad.tapping = false;
       };
     };
   };
@@ -111,17 +140,25 @@ in
     git
     tmux
     w3m
+    tailscale
+    ((pinnedPkgs.emacsPackagesFor pinnedPkgs.emacsPgtkGcc).emacsWithPackages (epkgs: [ epkgs.vterm ]))
   ];
+
   programs.vim.defaultEditor = true;
 
-  nixpkgs.config.allowUnfree = true;
+  services.tailscale.enable = true;
+  services.openssh.enable = true;
 
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   # Or disable the firewall altogether.
-  networking.firewall.enable = true;
+  networking.firewall = {
+    allowedUDPPorts = [ 41641 ];
+    enable = false;
+  };
+
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

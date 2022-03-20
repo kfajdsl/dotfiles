@@ -5,7 +5,80 @@ let
 in
 {
   # Read packages from a json file
-  home.packages = map (x: strToAttr pkgs x) (builtins.fromJSON (builtins.readFile ./packages.json));
+  home.packages = with pkgs; [
+    dbeaver
+    alacritty
+    firefox
+    gimp
+    neovim
+    deluge
+    teams
+    spotify
+    virt-manager
+    vivaldi
+    vlc
+    xsane
+    docker
+    cmake
+    gcc
+    gnumake
+    nodejs
+    postgresql
+    python3
+    awscli2
+    nodePackages.node2nix
+    nodePackages.typescript
+    nodePackages.typescript-language-server
+    nodePackages.prettier
+    nix-index
+    autoconf
+    automake
+    brightnessctl
+    fd
+    feh
+    ffmpeg
+    flameshot
+    htop
+    fzf
+    neofetch
+    pavucontrol
+    networkmanagerapplet
+    redshift
+    ripgrep
+    unzip
+    usbutils
+    wmname
+    xorg.xev
+    xorg.xprop
+    xsel
+    xorg.xcursorgen
+    pkg-config
+    youtube-dl
+    lsof
+    siji
+    iosevka-ss02-bin
+    unifont
+    picom
+    polybar
+    rofi
+    sxhkd
+    gnome3.adwaita-icon-theme
+    libreoffice
+    vscode
+    appimage-run
+    protobuf
+    libtool
+    libvterm
+    neovim-qt
+    evince
+    pulseeffects-legacy
+    direnv
+  ];
+
+  services.udiskie = {
+    enable = true;
+    notify = true;
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
@@ -14,6 +87,10 @@ in
   # paths it should manage.
   home.username = "sahan";
   home.homeDirectory = "/home/sahan";
+
+  fonts.fontconfig.enable = true;
+
+  programs.info.enable = true;
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -24,15 +101,4 @@ in
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "21.03";
-
-  fonts.fontconfig.enable = true;
-
-  programs.info.enable = true;
-
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacsGcc;
-    extraPackages = (epkgs: [ epkgs.vterm ] );
-  };
-
 }
